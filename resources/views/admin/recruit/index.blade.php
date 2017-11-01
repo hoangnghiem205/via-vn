@@ -4,7 +4,7 @@
 <!-- Default box -->
 <div class="box">
 <div class="box-header with-border">
-  <a href="{{ route('admin.services.form') }}" class="btn btn-primary"><i class="fa fa-plus"></i> New Service</a>
+  <a href="{{ route('admin.recruit.form') }}" class="btn btn-primary"><i class="fa fa-plus"></i> New Post</a>
 </div>
 <div class="box-body">
   <table id="example1" class="table table-bordered table-hover">
@@ -18,16 +18,16 @@
   </tr>
   </thead>
   <tbody>
-  @foreach($services as $service)
+  @foreach($recruits as $recruit)
     <tr>
-      <td>{{$service->title_en}}</td>
-      <td>{{$service->author}}</td>
-      <td>{{$service->created_at}}</td>
-      <td>{{$service->updated_at}}</td>
+      <td>{{$recruit->title_en}}</td>
+      <td>{{$recruit->author}}</td>
+      <td>{{$recruit->created_at}}</td>
+      <td>{{$recruit->updated_at}}</td>
       <td>
         <center> 
-        <a href="{{ route('admin.services.editform', ['id'=>$service->id]) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
-        <form class="delete" style="display:inline;" action="{{ route('admin.services.delete', ['id'=>$service->id]) }}" method="get">
+        <a href="{{ route('admin.recruit.editform', ['id'=>$recruit->id]) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+        <form class="delete" style="display:inline;" action="{{ route('admin.posts.delete', ['id'=>$recruit->id]) }}" method="get">
           <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
         </form>
         

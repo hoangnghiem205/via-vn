@@ -34,13 +34,14 @@
         <li class="active"><a href="{{ route('admin.dashboard')}}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
         <li><a href="{{ route('admin.users')}}"><i class="fa fa-users"></i> <span>Users</span></a></li>
         <li><a href="{{ route('admin.posts')}}"><i class="fa fa-newspaper-o"></i> <span>News</span></a></li>
+        <li><a href="{{ route('admin.recruit')}}"><i class="fa fa-user"></i> <span>Recruitments</span></a></li>
         <li><a href="{{ route('admin.services')}}"><i class="fa fa-handshake-o"></i> <span>Services</span></a></li>
         <li><a href="{{ route('admin.features')}}"><i class="fa fa-puzzle-piece"></i> <span>Features</span></a></li>
         <li><a href="{{ route('admin.info')}}"><i class="fa fa-institution"></i> <span>Company Info</span></a></li>
 
         <li class="header">SETTING</li>
         <li><a href="{{ route('admin.slides')}}"><i class="fa fa-video-camera"></i> <span>Slide Show</span></a></li>
-        <li><a href="{{ route('admin.users')}}"><i class="fa fa-gear"></i> <span>Other</span></a></li>
+        <li><a href="{{ route('admin.other')}}"><i class="fa fa-gear"></i> <span>Other</span></a></li>
         <!-- <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">

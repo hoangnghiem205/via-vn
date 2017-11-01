@@ -45,9 +45,14 @@ class PostsController extends Controller
 
     public function update(Request $request, $id) {
         $post = Post::find($id);
-        $post->title = $request->title;
-        $post->summary = $request->summary;
-        $post->content = $request->content;
+        $post->title_en = $request->title_en;
+        $post->summary_en = $request->summary_en;
+        $post->content_en = $request->content_en;
+
+        $post->title_jp = $request->title_jp;
+        $post->summary_jp = $request->summary_jp;
+        $post->content_jp = $request->content_jp;
+
         $post->img = $request->img;
         $post->save();
         return redirect()->intended(route('admin.posts'));
@@ -61,9 +66,14 @@ class PostsController extends Controller
 
     public function add(Request $request) {
         $post = new Post;
-        $post->title = $request->title;
-        $post->summary = $request->summary;
-        $post->content = $request->content;
+        $post->title_en = $request->title_en;
+        $post->summary_en = $request->summary_en;
+        $post->content_en = $request->content_en;
+
+        $post->title_jp = $request->title_jp;
+        $post->summary_jp = $request->summary_jp;
+        $post->content_jp = $request->content_jp;
+
         $post->img = $request->img;
         $post->author = $request->author;
         $post->type = 1;

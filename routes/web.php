@@ -10,19 +10,31 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::post('/language-chooser', 'LanguageController@changeLanguage');
+Route::post('/language/', array(
+    'before' => 'csrf',
+    'as' => 'language-chooser',
+    'uses' => 'LanguageController@changeLanguage'
+));
+Route::get('send_test_email', function(){
+    Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
+    {
+        $message->subject('Hello');
+        $message->from('mailgun@mg.via-vn.com');
+        $message->to('hoangnghiem205@gmail.com');
+    });
+    echo 'done';
 });
-
-// route to show the login form
-
-// route to process the form
-Route::post('admin/login', array('uses' => 'HomeController@doLogin'));
-
+Route::get('/', 'HomeController@index')->name('user.home');
+Route::get('/about', 'HomeController@about')->name('user.about');
+Route::get('/service', 'HomeController@service')->name('user.service');
+Route::get('/feature', 'HomeController@feature')->name('user.feature');
+Route::get('/news', 'HomeController@news')->name('user.news');
+Route::get('/news/{id}', 'HomeController@detail')->name('user.news.detail');
+Route::get('/contact', 'HomeController@contact')->name('user.contact');
+Route::get('/recruitment', 'HomeController@recruitment')->name('user.recruitment');
+Route::post('/contact', 'HomeController@sendMail')->name('user.contact.send');
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
 Route::prefix('admin')->group(function() {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
@@ -43,6 +55,13 @@ Route::prefix('admin')->group(function() {
     Route::get('/posts/delete/{id}', 'PostsController@delete')->name('admin.posts.delete');
     Route::patch('/posts/udpate/{id}', 'PostsController@update')->name('admin.posts.update');
     Route::post('/posts/new', 'PostsController@add')->name('admin.posts.new');
+    // recruit
+    Route::get('/recruit', 'RecruitmentsController@index')->name('admin.recruit');
+    Route::get('/recruit/new', 'RecruitmentsController@showAddForm')->name('admin.recruit.form');
+    Route::get('/recruit/edit/{id}', 'RecruitmentsController@showEditForm')->name('admin.recruit.editform');
+    Route::get('/recruit/delete/{id}', 'RecruitmentsController@delete')->name('admin.recruit.delete');
+    Route::patch('/recruit/udpate/{id}', 'RecruitmentsController@update')->name('admin.recruit.update');
+    Route::post('/recruit/new', 'RecruitmentsController@add')->name('admin.recruit.new');
     // services
     Route::get('/services', 'ServicesController@index')->name('admin.services');
     Route::get('/services/new', 'ServicesController@showAddForm')->name('admin.services.form');
@@ -71,6 +90,13 @@ Route::prefix('admin')->group(function() {
     Route::get('/slides/delete/{id}', 'SlidesController@delete')->name('admin.slides.delete');
     Route::patch('/slides/udpate/{id}', 'SlidesController@update')->name('admin.slides.update');
     Route::post('/slides/new', 'SlidesController@add')->name('admin.slides.new');
+    // others
+    Route::get('/other', 'OtherController@index')->name('admin.other');
+    Route::get('/other/new', 'OtherController@showAddForm')->name('admin.other.form');
+    Route::get('/other/edit/{id}', 'OtherController@showEditForm')->name('admin.other.editform');
+    Route::get('/other/delete/{id}', 'OtherController@delete')->name('admin.other.delete');
+    Route::patch('/other/udpate/{id}', 'OtherController@update')->name('admin.other.update');
+    Route::post('/other/new', 'OtherController@add')->name('admin.other.new');
 });
 
 

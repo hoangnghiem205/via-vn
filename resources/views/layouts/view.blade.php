@@ -87,6 +87,17 @@
 <script src="{{ asset("/js/plugins.js") }}"></script>
 <script src="{{ asset("/js/main.js") }}"></script>
 
+<script>
+    $(document).ready(function() {
+        $('#btnChangeLang').click(function(evt) {
+            var token = $("input[name=_token").val();
+            var locale = $("input[name=locale").val();
+            $.post( "/language",{locale: locale, _token: token}, function(data) {
+                window.location.reload(true);
+            });
+        });
+    })
+</script>
 </body>
 
 </html>

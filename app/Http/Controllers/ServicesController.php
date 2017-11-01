@@ -43,9 +43,13 @@ class ServicesController extends Controller
 
     public function update(Request $request, $id) {
         $service = Post::find($id);
-        $service->title = $request->title;
-        $service->summary = $request->summary;
-        $service->content = $request->content;
+        $service->title_en = $request->title_en;
+        $service->summary_en = $request->summary_en;
+        $service->content_en = $request->content_en;
+
+        $service->title_jp = $request->title_jp;
+        $service->summary_jp = $request->summary_jp;
+        $service->content_jp = $request->content_jp;
         $service->img = $request->img;
         $service->save();
         return redirect()->intended(route('admin.services'));
@@ -59,9 +63,12 @@ class ServicesController extends Controller
 
     public function add(Request $request) {
         $service = new Post;
-        $service->title = $request->title;
-        $service->summary = $request->summary;
-        $service->content = $request->content;
+        $service->title_en = $request->title_en;
+        $service->summary_en = $request->summary_en;
+        $service->content_en = $request->content_en;
+        $service->title_jp = $request->title_jp;
+        $service->summary_jp = $request->summary_jp;
+        $service->content_jp = $request->content_jp;
         $service->img = $request->img;
         $service->author = $request->author;
         $service->type = 2;

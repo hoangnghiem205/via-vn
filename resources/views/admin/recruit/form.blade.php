@@ -4,15 +4,15 @@
 
     <div class="row">
         <div class="col-md-12">
-            @if(isset($feature))
-                {{ Form::model($feature, ['route' => ['admin.features.update', $feature->id], 'method' => 'patch', 'class' => 'form-horizontal']) }}
+            @if(isset($recruit))
+                {{ Form::model($recruit, ['route' => ['admin.recruit.update', $recruit->id], 'method' => 'patch', 'class' => 'form-horizontal']) }}
             @else
-                {{ Form::open(['route' => 'admin.features.new', 'method' => 'post', 'class' => 'form-horizontal']) }}
+                {{ Form::open(['route' => 'admin.recruit.new', 'method' => 'post', 'class' => 'form-horizontal']) }}
             @endif
 
             <div class="box box-info">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Feature form</h3>
+                    <h3 class="box-title">Post form</h3>
                     <ul class="nav nav-pills pull-right">
                         <li class="active"><a data-toggle="pill" href="#form_en">English</a></li>
                         <li><a data-toggle="pill" href="#form_jp">日本語</a></li>

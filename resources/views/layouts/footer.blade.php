@@ -5,17 +5,16 @@
             <div class="widget_area">
                 <div class="col-md-4">
                     <div class="widget_item widget_about">
-                        <h5 class="text-white">About Us</h5>
-                        <p class="m-top-20">Lorem ipsum dolor sit amet consec tetur adipiscing elit nulla aliquet pretium nisi in cursus
-                            maecenas nec eleifen.</p>
+                        <h5 class="text-white">@lang('footer.about')</h5>
+                        <p class="m-top-20">@lang('footer.com_intro')</p>
                         <div class="widget_ab_item m-top-30">
                             <div class="item_icon">
                                 <i class="fa fa-location-arrow"></i>
                             </div>
                             <div class="widget_ab_item_text">
-                                <h6 class="text-white">Location</h6>
+                                <h6 class="text-white">@lang('footer.location')</h6>
                                 <p>
-                                    123 suscipit ipsum nam auctor mauris dui, ac sollicitudin mauris, Bandung
+                                    {{$others['address']}}
                                 </p>
                             </div>
                         </div>
@@ -24,8 +23,8 @@
                                 <i class="fa fa-phone"></i>
                             </div>
                             <div class="widget_ab_item_text">
-                                <h6 class="text-white">Phone :</h6>
-                                <p>+1 2345 6789</p>
+                                <h6 class="text-white">@lang('footer.phone') :</h6>
+                                <p>{{$others['phone']}}</p>
                             </div>
                         </div>
                         <div class="widget_ab_item m-top-30">
@@ -33,8 +32,8 @@
                                 <i class="fa fa-envelope-o"></i>
                             </div>
                             <div class="widget_ab_item_text">
-                                <h6 class="text-white">Email Address :</h6>
-                                <p>youremail@mail.com</p>
+                                <h6 class="text-white">@lang('footer.email') :</h6>
+                                <p>{{$others['email']}}</p>
                             </div>
                         </div>
                     </div>
@@ -44,31 +43,35 @@
 
                 <div class="col-md-4">
                     <div class="widget_item widget_service sm-m-top-50">
-                        <h5 class="text-white">Latest News</h5>
+                        <h5 class="text-white">@lang('nav.menu')</h5>
                         <ul class="m-top-20">
                             <li class="m-top-20">
                                 <a href="">
-                                    <i class="fa fa-angle-right"></i> Web Design</a>
+                                    <i class="fa fa-angle-right"></i> @lang('nav.home')</a>
                             </li>
                             <li class="m-top-20">
                                 <a href="">
-                                    <i class="fa fa-angle-right"></i> User Interface Design</a>
+                                    <i class="fa fa-angle-right"></i> @lang('nav.about')</a>
                             </li>
                             <li class="m-top-20">
                                 <a href="">
-                                    <i class="fa fa-angle-right"></i> E- Commerce</a>
+                                    <i class="fa fa-angle-right"></i> @lang('nav.service')</a>
                             </li>
                             <li class="m-top-20">
                                 <a href="">
-                                    <i class="fa fa-angle-right"></i> Web Hosting</a>
+                                    <i class="fa fa-angle-right"></i> @lang('nav.feature')</a>
                             </li>
                             <li class="m-top-20">
                                 <a href="">
-                                    <i class="fa fa-angle-right"></i> Themes</a>
+                                    <i class="fa fa-angle-right"></i> @lang('nav.recruitment')</a>
                             </li>
                             <li class="m-top-20">
                                 <a href="">
-                                    <i class="fa fa-angle-right"></i> Support Forums</a>
+                                    <i class="fa fa-angle-right"></i> @lang('nav.news')</a>
+                            </li>
+                            <li class="m-top-20">
+                                <a href="">
+                                    <i class="fa fa-angle-right"></i> @lang('nav.contact')</a>
                             </li>
                         </ul>
                     </div>
@@ -78,17 +81,8 @@
 
                 <div class="col-md-4">
                     <div class="widget_item widget_newsletter sm-m-top-50">
-                        <h5 class="text-white">Newsletter</h5>
-                        <form class="form-inline m-top-30">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Enter you Email">
-                                <button type="submit" class="btn text-center">
-                                    <i class="fa fa-arrow-right"></i>
-                                </button>
-                            </div>
 
-                        </form>
-                        <div class="widget_brand m-top-40">
+                        <div class="widget_brand">
                             <a href="" class="text-uppercase">Your Logo</a>
                             <p>Lorem ipsum dolor sit amet consec tetur adipiscing elit nulla aliquet pretium nisi in</p>
                         </div>
@@ -133,11 +127,7 @@
     <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
         <div class="col-md-12">
             <p class="wow fadeInRight" data-wow-duration="1s">
-                Made with
-                <i class="fa fa-heart"></i>
-                by
-                <a target="_blank" href="https://bootstrapthemes.co">Bootstrap Themes</a>
-                2016. All Rights Reserved
+                © 2017 VIA VIETNAM CO., LTD. ALL RIGHTS RESERVED
             </p>
         </div>
     </div>

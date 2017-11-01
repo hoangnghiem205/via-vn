@@ -44,8 +44,10 @@ class InfoController extends Controller
 
     public function update(Request $request, $id) {
         $info = Info::find($id);
-        $info->name = $request->name;
-        $info->value = $request->value;
+        $info->name_en = $request->name_en;
+        $info->value_en = $request->value_en;
+        $info->name_jp = $request->name_jp;
+        $info->value_jp = $request->value_jp;
         $info->save();
         return redirect()->intended(route('admin.info'));
     }
@@ -58,8 +60,12 @@ class InfoController extends Controller
 
     public function add(Request $request) {
         $info = new Info;
-        $info->name = $request->name;
-        $info->value = $request->value;
+        $info->name_en = $request->name_en;
+        $info->value_en = $request->value_en;
+
+        $info->name_jp = $request->name_jp;
+        $info->value_jp = $request->value_jp;
+
         $info->type = 1;
         $info->save();
         return redirect()->intended(route('admin.info'));

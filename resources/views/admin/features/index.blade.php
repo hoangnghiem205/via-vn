@@ -20,7 +20,7 @@
   <tbody>
   @foreach($features as $feature)
     <tr>
-      <td>{{$feature->title}}</td>
+      <td>{{$feature->title_en}}</td>
       <td>{{$feature->author}}</td>
       <td>{{$feature->created_at}}</td>
       <td>{{$feature->updated_at}}</td>

@@ -43,9 +43,14 @@ class FeaturesController extends Controller
 
     public function update(Request $request, $id) {
         $feature = Post::find($id);
-        $feature->title = $request->title;
-        $feature->summary = $request->summary;
-        $feature->content = $request->content;
+        $feature->title_en = $request->title_en;
+        $feature->summary_en = $request->summary_en;
+        $feature->content_en = $request->content_en;
+
+        $feature->title_jp = $request->title_jp;
+        $feature->summary_jp = $request->summary_jp;
+        $feature->content_jp = $request->content_jp;
+
         $feature->img = $request->img;
         $feature->save();
         return redirect()->intended(route('admin.features'));
@@ -59,9 +64,14 @@ class FeaturesController extends Controller
 
     public function add(Request $request) {
         $feature = new Post;
-        $feature->title = $request->title;
-        $feature->summary = $request->summary;
-        $feature->content = $request->content;
+        $feature->title_en = $request->title_en;
+        $feature->summary_en = $request->summary_en;
+        $feature->content_en = $request->content_en;
+
+        $feature->title_jp = $request->title_jp;
+        $feature->summary_jp = $request->summary_jp;
+        $feature->content_jp = $request->content_jp;
+
         $feature->img = $request->img;
         $feature->author = $request->author;
         $feature->type = 3;

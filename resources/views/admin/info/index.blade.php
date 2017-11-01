@@ -20,8 +20,8 @@
   <tbody>
   @foreach($info as $item)
     <tr>
-      <td>{{$item->name}}</td>
-      <td>{{$item->value}}</td>
+      <td>{{$item->name_en}}</td>
+      <td>{{$item->value_en}}</td>
       <td>{{$item->created_at}}</td>
       <td>{{$item->updated_at}}</td>
       <td>

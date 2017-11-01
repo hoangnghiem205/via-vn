@@ -8,24 +8,29 @@
                         <ul class="list-inline">
                             <li>
                                 <a href="">
-                                    <i class="fa fa-phone"></i> Call us: 1234 5678 90</a>
+                                    <i class="fa fa-phone"></i> @lang('nav.phone') : {{$others['phone']}}</a>
                             </li>
                             <li>
                                 <a href="">
-                                    <i class="fa fa-envelope-o"></i> Contact us: your@email.com</a>
+                                    <i class="fa fa-envelope-o"></i> @lang('nav.email') : {{$others['email']}}</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="navbar-socail text-right sm-text-center">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="">
-                                    <i class="fa fa-globe"></i> English
-                                </a>
-                            </li>
-                        </ul>
+                        <form action="">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="locale" value="{{Session::get('locale') == 'jp' ? 'en' : 'jp'}}" />
+                            <ul class="list-inline">
+                                <li>
+                                    <a id="btnChangeLang">
+                                        <i class="fa fa-globe"></i> @lang('home.lang')
+                                    </a>
+                                </li>
+                            </ul>
+                        </form>
+
                     </div>
                 </div>
             </div>
@@ -51,25 +56,25 @@
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#home">Home</a>
+                    <a href="/">@lang('nav.home')</a>
                 </li>
                 <li>
-                    <a href="#features">About</a>
+                    <a href="/about">@lang('nav.about')</a>
                 </li>
                 <li>
-                    <a href="#business">Service</a>
+                    <a href="/service">@lang('nav.service')</a>
                 </li>
                 <li>
-                    <a href="#work">Feature</a>
+                    <a href="/feature">@lang('nav.feature')</a>
                 </li>
                 <li>
-                    <a href="#test">New</a>
+                    <a href="/news">@lang('nav.news')</a>
                 </li>
                 <li>
-                    <a href="#test">Recruitment</a>
+                    <a href="/recruitment">@lang('nav.recruitment')</a>
                 </li>
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a href="/contact">@lang('nav.contact')</a>
                 </li>
             </ul>
         </div>
