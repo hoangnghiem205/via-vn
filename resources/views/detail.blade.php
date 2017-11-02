@@ -14,12 +14,12 @@
             <div class="row">
                 <div class="main_features fix roomy-70">
                     <div class="header">
-                        <h3 class="header-title">{{$post->title_en}}</h3>
+                        <h3 class="header-title">{{$post->{'title_'.Session::get('locale','en')} }}</h3>
                         <h5>{{$post->created_at}}</h5>
                     </div>
                     <div class="content">
 
-                        {!! $post->content_en !!}
+                        {!! $post->{'content_'.Session::get('locale','en')} !!}
 
                     </div>
                 </div>
