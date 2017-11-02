@@ -6,7 +6,7 @@
     <section id="about" class="about bg-black fix">
         <div class="overlay"></div>
         <!--End off container -->
-        <h3>About</h3>
+        <h3>Details</h3>
     </section>
     <!--End off Home Sections-->
     <section id="news-detail">

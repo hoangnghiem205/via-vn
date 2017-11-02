@@ -23,7 +23,9 @@
                                             <div class="news-image">
                                                 <img src="{{$post->img}}" alt="">
                                             </div>
-                                            <h3 class="news-title">{{  $post->{'title_'.Session::get('locale','en')} }}</h3>
+                                            <a href="{{ route('user.news.detail', ['id' => $post->id]) }}">
+                                                <h3 class="news-title">{{  $post->{'title_'.Session::get('locale','en')} }}</h3>
+                                            </a>
                                             <div>created at {{$post->created_at}}</div>
                                             <div class="news-content">
                                                 {{  $post->{'summary_'.Session::get('locale','en')} }}
