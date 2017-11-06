@@ -20,9 +20,11 @@
                                 <div class="col-md-10 col-md-offset-1">
                                     @foreach($posts as $post)
                                         <div class="news-item">
+                                            @if($post->img != '')
                                             <div class="news-image">
                                                 <img src="{{$post->img}}" alt="">
                                             </div>
+                                            @endif
                                             <a href="{{ route('user.news.detail', ['id' => $post->id]) }}">
                                                 <h3 class="news-title">{{  $post->{'title_'.Session::get('locale','en')} }}</h3>
                                             </a>

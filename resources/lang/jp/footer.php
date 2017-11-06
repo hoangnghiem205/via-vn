@@ -6,4 +6,5 @@ return [
     'location' => '所在地',
     'email' => 'Eメール',
     'phone' => '電話',
+    'address' => '所在地'
 ];

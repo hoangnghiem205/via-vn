@@ -82,11 +82,12 @@
                 <div class="col-md-4">
                     <div class="widget_item widget_newsletter sm-m-top-50">
 
-                        <div class="widget_brand">
-                            <a href="" class="text-uppercase">Your Logo</a>
-                            <p>Lorem ipsum dolor sit amet consec tetur adipiscing elit nulla aliquet pretium nisi in</p>
+                        <div class="widget_brand" style="text-align: center">
+                            <a href="/" class="text-uppercase">
+                                <img src="{{ asset('images/flogo.png') }}" alt="">
+                            </a>
                         </div>
-                        <ul class="list-inline m-top-20">
+                        <ul class="list-inline m-top-20" style="text-align: center;">
                             <li>-
                                 <a href="">
                                     <i class="fa fa-facebook"></i>

@@ -177,7 +177,7 @@
                             <div class="item_text">
                                 <h5>{{$post->{'title_'.Session::get('locale', 'en')} }}</h5>
                                 <p>{{$post->{'summary_'.Session::get('locale', 'en')} }}</p>
-                                <h6>{{$post->author }}</h6>
+                                {{--<h6>{{$post->author }}</h6>--}}
                             </div>
                         </div>
                     </div>

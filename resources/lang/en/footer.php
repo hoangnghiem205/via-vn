@@ -6,4 +6,5 @@ return [
     'location' => 'Location',
     'email' => 'Email Address',
     'phone' => 'Phone',
+    'address' => 'Address'
 ];

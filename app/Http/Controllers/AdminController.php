@@ -23,6 +23,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin/layouts/admin_template');
+        $page_title = "VIA-VN.COM Dashboard";
+        $page_description = "Welcome, Administrator";
+        return view('admin/layouts/admin_template', compact( 'page_title', 'page_description'));
+
     }
 }

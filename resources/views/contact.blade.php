@@ -24,8 +24,8 @@
                                             </span>
                                         </div>
                                         <div class="box-content">
-                                            <h5 class="box-title">Phone</h5>
-                                            <p class="box-desc">(719) 445-2808; (719) 445-2809 </p>
+                                            <h5 class="box-title">@lang('nav.phone')</h5>
+                                            <p class="box-desc">{{$others['phone']}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -38,8 +38,8 @@
                                             </span>
                                         </div>
                                         <div class="box-content">
-                                            <h5 class="box-title">Address</h5>
-                                            <p class="box-desc">(719) 445-2808; (719) 445-2809 </p>
+                                            <h5 class="box-title">@lang('footer.address')</h5>
+                                            <p class="box-desc">{{$others['address']}} </p>
                                         </div>
                                     </div>
                                 </div>
@@ -52,8 +52,8 @@
                                             </span>
                                         </div>
                                         <div class="box-content">
-                                            <h5 class="box-title">Email</h5>
-                                            <p class="box-desc">(719) 445-2808; (719) 445-2809 </p>
+                                            <h5 class="box-title">@lang('nav.email')</h5>
+                                            <p class="box-desc">{{$others['phone']}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -64,26 +64,26 @@
                                     {{ Form::open(['route' => 'user.contact.send', 'method' => 'post']) }}
                                     {{ csrf_field() }}
                                         <div class="form-group">
-                                            {{ Form::label('name', 'Your name (require)') }}
+                                            {{ Form::label('name', Lang::get('contact.name')) }}
                                             {{ Form::text('name',null,['class' => 'form-control', 'placeholder' => 'Enter your name']) }}
                                         </div>
 
                                         <div class="form-group">
-                                            {{ Form::label('email', 'Your email (require)') }}
+                                            {{ Form::label('email', Lang::get('contact.email')) }}
                                             {{ Form::text('email',null,['class' => 'form-control', 'placeholder' => 'Enter your email']) }}
                                         </div>
 
                                         <div class="form-group">
-                                            {{ Form::label('subject', 'Subject') }}
+                                            {{ Form::label('subject', Lang::get('contact.subject')) }}
                                             {{ Form::text('subject',null,['class' => 'form-control', 'placeholder' => 'Subject']) }}
                                         </div>
 
                                         <div class="form-group">
-                                            {{ Form::label('message', 'Your Message') }}
+                                            {{ Form::label('message', Lang::get('contact.message')) }}
                                             {{ Form::textarea('message',null,['class' => 'form-control', 'rows' => '3', 'placeholder' => 'Enter summary']) }}
                                         </div>
                                         {{--{{ Form::submit('Save', ['class' => 'btn btn-primary']) }}--}}
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary">@lang('contact.send')</button>
                                     {{ Form::close() }}
                                 </div>
 
