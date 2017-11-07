@@ -83,24 +83,23 @@
 <script src="{{ asset("/js/jquery.collapse.js") }}"></script>
 <script src="{{ asset("/js/bootsnav.js") }}"></script>
 
-<script src="{{ asset("/bower-components/jquery-mobile/js/jquery.mobile.js") }}"></script>
+<script src="{{ asset("/bower_components/jquery-mobile/js/jquery.mobile.js") }}"></script>
 <script src="{{ asset("/js/plugins.js") }}"></script>
 <script src="{{ asset("/js/main.js") }}"></script>
 
 <script>
-    $(document).ready(function() {
-        function changeLang(evt) {
-            var token = $("input[name=_token").val();
-            var locale = $("input[name=locale").val();
-            $.post( "/language",{locale: locale, _token: token}, function(data) {
-                window.location.reload(true);
-            });
-        }
+    function changeLang(evt) {
+        var token = $('input[name="_token"]').val();
+        var locale = $('input[name="locale"]').val();
+        $.post("/language", {locale: locale, _token: token}, function (data) {
+            window.location.reload(true);
+        });
+    }
+    document.getElementById("btnChangeLang").addEventListener("touchstart", changeLang , false);
+    document.getElementById("btnChangeLang").addEventListener("click", changeLang , false);
 
-//        $('#btnChangeLang').click(changeLang);
-        $('#btnChangeLang').on('click tab', changeLang);
 
-    });
+
 </script>
 </body>
 
