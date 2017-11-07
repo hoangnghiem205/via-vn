@@ -83,7 +83,7 @@
 <script src="{{ asset("/js/jquery.collapse.js") }}"></script>
 <script src="{{ asset("/js/bootsnav.js") }}"></script>
 
-
+<script src="{{ asset("/bower-components/jquery-mobile/js/jquery.mobile.js") }}"></script>
 <script src="{{ asset("/js/plugins.js") }}"></script>
 <script src="{{ asset("/js/main.js") }}"></script>
 
@@ -97,8 +97,8 @@
             });
         }
 
-        $('#btnChangeLang').click(changeLang);
-        $('#btnChangeLang').touch(changeLang);
+//        $('#btnChangeLang').click(changeLang);
+        $('#btnChangeLang').on('click tab', changeLang);
 
     });
 </script>
