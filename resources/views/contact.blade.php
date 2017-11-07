@@ -16,7 +16,7 @@
                     <div class="content">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 sm-col-md-4">
                                     <div class="box">
                                         <div class="box-icon">
                                             <span>
@@ -30,7 +30,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 sm-col-md-4">
                                     <div class="box">
                                         <div class="box-icon">
                                             <span>
@@ -44,7 +44,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-4 sm-col-md-4">
                                     <div class="box">
                                         <div class="box-icon">
                                             <span>

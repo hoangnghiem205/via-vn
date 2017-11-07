@@ -59,6 +59,11 @@ Author URI: http://www.xpeedstudio.com
         width: auto;
     }
 
+    .sm-col-md-4 {
+        float: left;
+        margin-bottom: 30px;
+    }
+
     #company-info td.title {
         padding: 10px 10px;
     }
@@ -100,6 +105,10 @@ Author URI: http://www.xpeedstudio.com
         margin-bottom:20px;
     }
 
+    .sm-col-md-4 {
+        float: left;
+        margin-bottom: 30px;
+    }
 
     .main_home .home_text h2{
         font-size:24px;
@@ -156,6 +165,10 @@ Author URI: http://www.xpeedstudio.com
     #company-info td.info_text {
         padding: 10px;
         width: 70%;
+    }
+    .sm-col-md-4 {
+        float: left;
+        margin-bottom: 30px;
     }
 }
 
