@@ -59,6 +59,15 @@ Author URI: http://www.xpeedstudio.com
         width: auto;
     }
 
+    #company-info td.title {
+        padding: 10px 10px;
+    }
+
+    #company-info td.info_text {
+        padding: 10px;
+        width: 70%;
+    }
+
 }
 
 
@@ -110,6 +119,15 @@ Author URI: http://www.xpeedstudio.com
         height: 30px;
         width: auto;
     }
+
+    #company-info td.title {
+        padding: 10px 10px;
+    }
+
+    #company-info td.info_text {
+        padding: 10px;
+        width: 70%;
+    }
 }
 
 
@@ -131,6 +149,14 @@ Author URI: http://www.xpeedstudio.com
         height: 30px;
     }
 
+    #company-info td.title {
+        padding: 10px 10px;
+    }
+
+    #company-info td.info_text {
+        padding: 10px;
+        width: 70%;
+    }
 }
 
 

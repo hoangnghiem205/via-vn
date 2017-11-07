@@ -949,8 +949,7 @@ About Section style
     top: 0;
 }
 #company-info table {
-    margin-left: 15px;
-    margin-top: 15px;
+    margin: 15px;
 }
 
 #company-info td.info_text {
