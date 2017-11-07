@@ -53,6 +53,11 @@ Author URI: http://www.xpeedstudio.com
     }
 
 
+    .navbar-brand > img {
+        display: block;
+        height: 30px;
+        width: auto;
+    }
 
 }
 
@@ -100,6 +105,11 @@ Author URI: http://www.xpeedstudio.com
         display: none;
     }
 
+    .navbar-brand > img {
+        display: block;
+        height: 30px;
+        width: auto;
+    }
 }
 
 
@@ -116,7 +126,10 @@ Author URI: http://www.xpeedstudio.com
     .main_home .home_text h3{
         font-size:17px;
     }
-
+    .navbar-brand > img {
+        display: block;
+        height: 30px;
+    }
 
 }
 
