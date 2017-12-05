@@ -27,7 +27,9 @@ class PostsController extends Controller
     public function index()
     {
         // $posts = Post::all();
-        $posts = DB::table('posts')->where('type', '=', 1)->get();
+        $posts = DB::table('posts')->where('type', '=', 1)
+                                    ->orderByRaw('id DESC')
+                                    ->get();
         $page_title = "Posts Manager";
         return view('admin/posts/index',compact('posts', 'page_title'));
     }

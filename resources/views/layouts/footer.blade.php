@@ -6,7 +6,7 @@
                 <div class="col-md-4">
                     <div class="widget_item widget_about">
                         <h5 class="text-white">@lang('footer.about')</h5>
-                        <p class="m-top-20">@lang('footer.com_intro')</p>
+                        
                         <div class="widget_ab_item m-top-30">
                             <div class="item_icon">
                                 <i class="fa fa-location-arrow"></i>
@@ -46,31 +46,31 @@
                         <h5 class="text-white">@lang('nav.menu')</h5>
                         <ul class="m-top-20">
                             <li class="m-top-20">
-                                <a href="">
+                                <a href="/">
                                     <i class="fa fa-angle-right"></i> @lang('nav.home')</a>
                             </li>
                             <li class="m-top-20">
-                                <a href="">
+                                <a href="/about">
                                     <i class="fa fa-angle-right"></i> @lang('nav.about')</a>
                             </li>
                             <li class="m-top-20">
-                                <a href="">
+                                <a href="/service">
                                     <i class="fa fa-angle-right"></i> @lang('nav.service')</a>
                             </li>
                             <li class="m-top-20">
-                                <a href="">
+                                <a href="/feature">
                                     <i class="fa fa-angle-right"></i> @lang('nav.feature')</a>
                             </li>
                             <li class="m-top-20">
-                                <a href="">
+                                <a href="/recruitment">
                                     <i class="fa fa-angle-right"></i> @lang('nav.recruitment')</a>
                             </li>
                             <li class="m-top-20">
-                                <a href="">
+                                <a href="/news">
                                     <i class="fa fa-angle-right"></i> @lang('nav.news')</a>
                             </li>
                             <li class="m-top-20">
-                                <a href="">
+                                <a href="/contact">
                                     <i class="fa fa-angle-right"></i> @lang('nav.contact')</a>
                             </li>
                         </ul>

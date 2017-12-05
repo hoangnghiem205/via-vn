@@ -44,7 +44,10 @@ class HomeController extends MyController
     }
 
     public function news(){
-        $posts = DB::table('posts')->where('type', '=', 1)->paginate(15);
+        $posts = DB::table('posts')
+                    ->where('type', '=', 1)
+                    ->orderByRaw('id DESC')
+                    ->paginate(15);
         return view('news')->with(['others' => $this->others])
             ->with(compact('posts'));
     }

@@ -37,7 +37,7 @@
                                                 <i class="fa fa-home fa-2x"></i>
                                             </span>
                                         </div>
-                                        <div class="box-content">
+                                        <div class="box-content" style="width: 250px;">
                                             <h5 class="box-title">@lang('footer.address')</h5>
                                             <p class="box-desc">{{$others['address']}} </p>
                                         </div>
@@ -53,7 +53,7 @@
                                         </div>
                                         <div class="box-content">
                                             <h5 class="box-title">@lang('nav.email')</h5>
-                                            <p class="box-desc">{{$others['phone']}}</p>
+                                            <p class="box-desc">{{$others['email']}}</p>
                                         </div>
                                     </div>
                                 </div>

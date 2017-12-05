@@ -5,7 +5,7 @@ return [
     'home' => 'Home',
     'about' => 'About',
     'service' => 'Service',
-    'feature' => 'Feauture',
+    'feature' => 'Seminar',
     'news' => 'News',
     'recruitment' => 'Recruitment',
     'contact' => 'Contact',
