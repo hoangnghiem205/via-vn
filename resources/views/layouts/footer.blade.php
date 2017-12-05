@@ -1,4 +1,4 @@
-<footer id="contact" class="footer action-lage bg-black p-top-80">
+<footer id="contact" class="footer action-lage bg-via p-top-80">
     <!--<div class="action-lage"></div>-->
     <div class="container">
         <div class="row">
@@ -125,10 +125,10 @@
             </div>
         </div>
     </div>
-    <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
+    <div class="main_footer fix bg-mega-via text-center p-top-40 p-bottom-30 m-top-80">
         <div class="col-md-12">
             <p class="wow fadeInRight" data-wow-duration="1s">
-                © 2017 VIA VIETNAM CO., LTD. ALL RIGHTS RESERVED
+                <span style="color: white;">© 2017 VIA VIETNAM CO., LTD. ALL RIGHTS RESERVED</span>
             </p>
         </div>
     </div>

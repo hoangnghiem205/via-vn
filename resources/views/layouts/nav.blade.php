@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-default bootsnav navbar-fixed">
-    <div class="navbar-top bg-black fix">
+    <div class="navbar-top bg-via fix">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
