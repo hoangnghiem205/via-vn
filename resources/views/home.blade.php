@@ -181,8 +181,8 @@
 
                             <div class="item_text">
                                 <h5>{{$post->{'title_'.Session::get('locale', 'jp')} }}</h5>
-                                <p>{{$post->{'summary_'.Session::get('locale', 'jp')} }}</p>
-                                {{--<h6>{{$post->author }}</h6>--}}
+                                <!-- <p>{{$post->{'summary_'.Session::get('locale', 'jp')} }}</p> -->
+                                <h6>{{$post->author }}</h6>
                             </div>
                         </div>
                     </div>
