@@ -4,7 +4,7 @@
 <!-- Default box -->
 <div class="box">
 <div class="box-header with-border">
-  <a href="{{ route('admin.recruit.form') }}" class="btn btn-primary"><i class="fa fa-plus"></i> New Post</a>
+  <a href="{{ route('admin.recruit.form') }}" class="btn btn-primary"><i class="fa fa-plus"></i> New Recruit</a>
 </div>
 <div class="box-body">
   <table id="example1" class="table table-bordered table-hover">
@@ -27,7 +27,7 @@
       <td>
         <center> 
         <a href="{{ route('admin.recruit.editform', ['id'=>$recruit->id]) }}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
-        <form class="delete" style="display:inline;" action="{{ route('admin.posts.delete', ['id'=>$recruit->id]) }}" method="get">
+        <form class="delete" style="display:inline;" action="{{ route('admin.recruit.delete', ['id'=>$recruit->id]) }}" method="get">
           <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
         </form>
         
