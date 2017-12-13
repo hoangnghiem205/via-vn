@@ -25,7 +25,9 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        $services = DB::table('posts')->where('type', '=', 2)->get();
+        $services = DB::table('posts')->where('type', '=', 2)
+                                        ->orderByRaw('id DESC')
+                                        ->get();
         $page_title = "Service Manager";
         return view('admin/services/index',compact('services', 'page_title'));
     }

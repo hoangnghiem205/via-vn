@@ -27,7 +27,9 @@ class RecruitmentsController extends Controller
     public function index()
     {
         // $posts = Post::all();
-        $recruits = DB::table('posts')->where('type', '=', 4)->get();
+        $recruits = DB::table('posts')->where('type', '=', 4)
+                                        ->orderByRaw('id DESC')
+                                        ->get();
         $page_title = "Recruitment Manager";
         return view('admin/recruit/index',compact('recruits', 'page_title'));
     }

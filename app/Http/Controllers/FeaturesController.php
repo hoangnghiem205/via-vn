@@ -25,18 +25,20 @@ class FeaturesController extends Controller
      */
     public function index()
     {
-        $features = DB::table('posts')->where('type', '=', 3)->orderByRaw('id DESC')->get();
-        $page_title = "Features Manager";
+        $features = DB::table('posts')->where('type', '=', 3)
+                                        ->orderByRaw('id DESC')
+                                        ->get();
+        $page_title = "Seminar Manager";
         return view('admin/features/index',compact('features', 'page_title'));
     }
 
     public function showAddForm() {
-        $page_title = "New Feature";
+        $page_title = "New Seminar";
         return view('admin/features/form',compact('page_title'));
     }
 
     public function showEditForm($id) {
-        $page_title = "Edit Features";
+        $page_title = "Edit Seminar";
         $feature = Post::find($id);
         return view('admin/features/form',compact('page_title', 'feature'));
     }

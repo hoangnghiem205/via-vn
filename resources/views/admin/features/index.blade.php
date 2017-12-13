@@ -4,7 +4,7 @@
 <!-- Default box -->
 <div class="box">
 <div class="box-header with-border">
-  <a href="{{ route('admin.features.form') }}" class="btn btn-primary"><i class="fa fa-plus"></i> New Feature</a>
+  <a href="{{ route('admin.features.form') }}" class="btn btn-primary"><i class="fa fa-plus"></i> New Seminar</a>
 </div>
 <div class="box-body">
   <table id="example1" class="table table-bordered table-hover">
