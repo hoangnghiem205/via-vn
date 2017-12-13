@@ -23,27 +23,7 @@
 
                     {{ csrf_field() }}
                     {{ Form::hidden('author',Auth::user()->name,[]) }}
-                    <div id="form_en" class="tab-pane fade in active">
-                        <div class="form-group">
-                            {{ Form::label('title_en', 'Title', ['class' => 'col-sm-2 control-label']) }}
-                            <div class="col-sm-10">
-                                {{ Form::text('title_en',null,['class' => 'form-control', 'placeholder' => 'Enter title']) }}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            {{ Form::label('summary_en', 'Summary', ['class' => 'col-sm-2 control-label']) }}
-                            <div class="col-sm-10">
-                                {{ Form::textarea('summary_en',null,['class' => 'form-control', 'rows' => '3', 'placeholder' => 'Enter summary']) }}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            {{ Form::label('content_en', 'Content', ['class' => 'col-sm-2 control-label']) }}
-                            <div class="col-sm-10">
-                                {{ Form::textarea('content_en',null,['id' => 'editor_en', 'class' => 'form-control', 'placeholder' => 'Enter content']) }}
-                            </div>
-                        </div>
-                    </div>
-                    <div id="form_jp" class="tab-pane fade">
+                    <div id="form_jp" class="tab-pane fade in active">
                         <div class="form-group">
                             {{ Form::label('title_jp', 'Title', ['class' => 'col-sm-2 control-label']) }}
                             <div class="col-sm-10">
@@ -63,6 +43,27 @@
                             </div>
                         </div>
                     </div>
+                    <div id="form_en" class="tab-pane fade ">
+                        <div class="form-group">
+                            {{ Form::label('title_en', 'Title', ['class' => 'col-sm-2 control-label']) }}
+                            <div class="col-sm-10">
+                                {{ Form::text('title_en',null,['class' => 'form-control', 'placeholder' => 'Enter title']) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('summary_en', 'Summary', ['class' => 'col-sm-2 control-label']) }}
+                            <div class="col-sm-10">
+                                {{ Form::textarea('summary_en',null,['class' => 'form-control', 'rows' => '3', 'placeholder' => 'Enter summary']) }}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('content_en', 'Content', ['class' => 'col-sm-2 control-label']) }}
+                            <div class="col-sm-10">
+                                {{ Form::textarea('content_en',null,['id' => 'editor_en', 'class' => 'form-control', 'placeholder' => 'Enter content']) }}
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="form-group">
                         {{ Form::label('image', 'Image', ['class' => 'col-sm-2 control-label']) }}
                         <div class="col-sm-10">
