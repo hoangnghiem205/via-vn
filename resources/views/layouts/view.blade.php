@@ -43,6 +43,16 @@
     <link rel="stylesheet" href="{{ asset("/css/responsive.css") }}"/>
 
     <script src="{{ asset("/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js") }}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111169900-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111169900-1');
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
