@@ -14,8 +14,8 @@
       <div class="box-header with-border">
         <h3 class="box-title">Post form</h3>
           <ul class="nav nav-pills pull-right">
-              <li class="active"><a data-toggle="pill" href="#form_en">English</a></li>
-              <li><a data-toggle="pill" href="#form_jp">日本語</a></li>
+              <li class="active"><a data-toggle="pill" href="#form_jp">日本語</a></li>
+              <li ><a data-toggle="pill" href="#form_en">English</a></li>
           </ul>
       </div>
 
@@ -23,27 +23,8 @@
         
           {{ csrf_field() }}
           {{ Form::hidden('author',Auth::user()->name,[]) }}
-          <div id="form_en" class="tab-pane fade in active">
-              <div class="form-group">
-                  {{ Form::label('title_en', 'Title', ['class' => 'col-sm-2 control-label']) }}
-                  <div class="col-sm-10">
-                      {{ Form::text('title_en',null,['class' => 'form-control', 'placeholder' => 'Enter title']) }}
-                  </div>
-              </div>
-              <div class="form-group">
-                  {{ Form::label('summary_en', 'Summary', ['class' => 'col-sm-2 control-label']) }}
-                  <div class="col-sm-10">
-                      {{ Form::textarea('summary_en',null,['class' => 'form-control', 'rows' => '3', 'placeholder' => 'Enter summary']) }}
-                  </div>
-              </div>
-              <div class="form-group">
-                  {{ Form::label('content_en', 'Content', ['class' => 'col-sm-2 control-label']) }}
-                  <div class="col-sm-10">
-                      {{ Form::textarea('content_en',null,['id' => 'editor_en', 'class' => 'form-control', 'placeholder' => 'Enter content']) }}
-                  </div>
-              </div>
-          </div>
-          <div id="form_jp" class="tab-pane fade">
+          
+          <div id="form_jp" class="tab-pane fade in active">
               <div class="form-group">
                   {{ Form::label('title_jp', 'Title', ['class' => 'col-sm-2 control-label']) }}
                   <div class="col-sm-10">
@@ -60,6 +41,26 @@
                   {{ Form::label('content_jp', 'Content', ['class' => 'col-sm-2 control-label']) }}
                   <div class="col-sm-10">
                       {{ Form::textarea('content_jp',null,['id' => 'editor_jp', 'class' => 'form-control', 'placeholder' => 'Enter content']) }}
+                  </div>
+              </div>
+          </div>
+          <div id="form_en" class="tab-pane fade">
+              <div class="form-group">
+                  {{ Form::label('title_en', 'Title', ['class' => 'col-sm-2 control-label']) }}
+                  <div class="col-sm-10">
+                      {{ Form::text('title_en',null,['class' => 'form-control', 'placeholder' => 'Enter title']) }}
+                  </div>
+              </div>
+              <div class="form-group">
+                  {{ Form::label('summary_en', 'Summary', ['class' => 'col-sm-2 control-label']) }}
+                  <div class="col-sm-10">
+                      {{ Form::textarea('summary_en',null,['class' => 'form-control', 'rows' => '3', 'placeholder' => 'Enter summary']) }}
+                  </div>
+              </div>
+              <div class="form-group">
+                  {{ Form::label('content_en', 'Content', ['class' => 'col-sm-2 control-label']) }}
+                  <div class="col-sm-10">
+                      {{ Form::textarea('content_en',null,['id' => 'editor_en', 'class' => 'form-control', 'placeholder' => 'Enter content']) }}
                   </div>
               </div>
           </div>
