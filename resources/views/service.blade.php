@@ -16,11 +16,11 @@
                     @foreach($services as $service)
                     <div class="service-item">
                         <div class="header">
-                            <h3 class="header-title">{{$service->{'title_'.Session::get('locale','en')} }}</h3>
+                            <h3 class="header-title">{{$service->{'title_'.Session::get('locale','jp')} }}</h3>
                             <span class="line"></span>
                         </div>
                         <div class="content">
-                            <p>{!! $service->{'content_'.Session::get('locale','en')} !!}</p>
+                            <p>{!! $service->{'content_'.Session::get('locale','jp')} !!}</p>
                         </div>
                     </div>
                     @endforeach
