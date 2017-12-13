@@ -38,7 +38,10 @@ class HomeController extends MyController
             ->with(compact('services'));
     }
     public function feature(){
-        $features = DB::table('posts')->where('type', '=', 3)->get();
+        $features = DB::table('posts')
+                            ->where('type', '=', 3)
+                            ->orderByRaw('id DESC')
+                            ->paginate(15);
         return view('feature')->with(['others' => $this->others])
             ->with(compact('features'));
     }
