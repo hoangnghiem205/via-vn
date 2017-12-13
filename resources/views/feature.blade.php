@@ -13,24 +13,42 @@
         <div class="container">
             <div class="row">
                 <div class="main_features fix roomy-70">
-                    <div class="header">
-                        <h3 class="header-title">Our Feature</h3>
-                        <span class="line"></span>
-                    </div>
+
                     <div class="content">
-                        <div id="accordion">
-                            @foreach($features as $index => $f)
-                            <h3 data-toggle="collapse" data-target="#feature{{$index}}">
-                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                                {{$f->{'title_'.Session::get('locale','en')} }}</h3>
-                            <div id="feature{{$index}}" class="collapse">
-                                    {!! $f->{'content_'.Session::get('locale','en')} !!}
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    @foreach($features as $index => $f)
+                                    <div class="news-item">
+                                        @if($f->img != '')
+                                        <div class="news-image">
+                                            <img src="{{$f->img}}" alt="">
+                                        </div>
+                                        @endif
+                                        <a href="{{ route('user.news.detail', ['id' => $f->id]) }}">
+                                            <h3 class="news-title">{{  $f->{'title_'.Session::get('locale','jp')} }}</h3>
+                                        </a>
+
+                                        <div>created at {{$f->created_at}}</div>
+                                        @if($f->{'summary_'.Session::get('locale','jp')} != '')
+                                        <div class="news-content">
+                                            {{  $f->{'summary_'.Session::get('locale','jp')} }}
+                                        </div>
+                                        @endif
+                                    </div>
+                                    @endforeach
+
+                                </div>
                             </div>
-                                @if($features->last() !== $f)
-                                <div class="sline"></div>
-                                @endif
-                            @endforeach
+
+
+
+                            <div class="row" style="text-align: center">
+                                <?php echo $features->render(); ?>
+                            </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
