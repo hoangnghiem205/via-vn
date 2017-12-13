@@ -74,7 +74,10 @@ class HomeController extends MyController
             "message"=>$request->message,
             "email"=>$request->email
         ];
-        Mail::to('hoangnghiem205@gmail.com')->send(new ContactSender($data));
+        Mail::to('murayama@via-vn.com')
+                ->cc('oanh.nt@via-vn.com')
+                ->bcc('hoangnm@ows.vn')
+                ->send(new ContactSender($data));
         return back();
 
 

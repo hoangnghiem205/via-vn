@@ -14,8 +14,8 @@
                 <div class="box-header with-border">
                     <h3 class="box-title">Feature form</h3>
                     <ul class="nav nav-pills pull-right">
-                        <li class="active"><a data-toggle="pill" href="#form_en">English</a></li>
-                        <li><a data-toggle="pill" href="#form_jp">日本語</a></li>
+                        <li class="active"><a data-toggle="pill" href="#form_jp">日本語</a></li>
+                        <li><a data-toggle="pill" href="#form_en">English</a></li>
                     </ul>
                 </div>
 
