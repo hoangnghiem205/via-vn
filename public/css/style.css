@@ -1428,7 +1428,10 @@ work Section style
 }
 .main_test .item_text{
     display: inline-block;
-    width:70%;
+    width: 90%;
+}
+.main_test .item_text h5{
+    font-weight: bold;
 }
 .item_img{
     position: relative;
