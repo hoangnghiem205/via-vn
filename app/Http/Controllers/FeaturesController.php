@@ -25,7 +25,7 @@ class FeaturesController extends Controller
      */
     public function index()
     {
-        $features = DB::table('posts')->where('type', '=', 3)->get();
+        $features = DB::table('posts')->where('type', '=', 3)->orderByRaw('id DESC')->get();
         $page_title = "Features Manager";
         return view('admin/features/index',compact('features', 'page_title'));
     }
