@@ -26,12 +26,12 @@
                                         </div>
                                         @endif
                                         <a href="{{ route('user.news.detail', ['id' => $post->id]) }}">
-                                            <h3 class="news-title">{{  $post->{'title_'.Session::get('locale','en')} }}</h3>
+                                            <h3 class="news-title">{{  $post->{'title_'.Session::get('locale','jp')} }}</h3>
                                         </a>
 
                                         <div>created at {{$post->created_at}}</div>
                                         <div class="news-content">
-                                            {{  $post->{'summary_'.Session::get('locale','en')} }}
+                                            {{  $post->{'summary_'.Session::get('locale','jp')} }}
                                         </div>
                                     </div>
                                     @endforeach

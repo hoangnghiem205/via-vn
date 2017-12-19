@@ -19,7 +19,10 @@ class HomeController extends MyController
     public function index()
     {
         $services = DB::table('posts')->where('type', '=', 2)->get();
-        $posts = DB::table('posts')->where('type', '=', 1)->take(4)->get();
+        $posts = DB::table('posts')
+                        ->where('type', '=', 1)
+                        ->orderByRaw('id DESC')
+                        ->take(4)->get();
 
         return view('home')->with(['others' => $this->others])
                                 ->with(compact('services'))
