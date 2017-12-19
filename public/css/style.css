@@ -1399,11 +1399,11 @@ work Section style
 /*Test Section
 ======================*/
 .main_test{
-    width: 100%;
+    width: 110%;
     display: block;
 }
 .test_item{
-    padding: 30px;
+    padding: 20px 0px;
     transition: all 0.6s;
     border:1px solid transparent;
 }
@@ -1419,8 +1419,9 @@ work Section style
 .main_test .item_img{
     float: left;
     display: inline-block;
-    width:20%;
-    margin-right: 5%;
+    width: 17%;
+    margin-right: 10px;
+    margin-left: 20px;
 }
 .main_test .item_img img{
     border: 2px solid #979797;
@@ -1428,7 +1429,7 @@ work Section style
 }
 .main_test .item_text{
     display: inline-block;
-    width: 90%;
+    width: 70%;
 }
 .main_test .item_text h5{
     font-weight: bold;
