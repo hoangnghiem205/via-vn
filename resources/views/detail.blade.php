@@ -6,7 +6,7 @@
     <section id="about" class="about bg-black fix">
         <div class="overlay"></div>
         <!--End off container -->
-        <h3>Details</h3>
+        <h3>News & Event</h3>
     </section>
     <!--End off Home Sections-->
     <section id="news-detail">
@@ -14,12 +14,12 @@
             <div class="row">
                 <div class="main_features fix roomy-70">
                     <div class="header">
-                        <h3 class="header-title">{{$post->{'title_'.Session::get('locale','en')} }}</h3>
+                        <h3 class="header-title">{{$post->{'title_'.Session::get('locale','jp')} }}</h3>
                         <h5>{{$post->created_at}}</h5>
                     </div>
                     <div class="content">
 
-                        {!! $post->{'content_'.Session::get('locale','en')} !!}
+                        {!! $post->{'content_'.Session::get('locale','jp')} !!}
 
                     </div>
                 </div>
