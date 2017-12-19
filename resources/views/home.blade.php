@@ -175,8 +175,16 @@
                     @foreach($posts as $post)
                     <div class="col-md-6">
                         <div class="test_item fix">
+                            <div class="item_img">
+                                <img src="{{$post->img}}" alt=""/>
+                            </div>
                             <div class="item_text">
-                                <h5>{{$post->{'title_'.Session::get('locale', 'jp')} }}</h5>
+                                <h5>
+                                <a href="{{ route('user.news.detail', ['id' => $post->id]) }}">
+                                    {{$post->{'title_'.Session::get('locale', 'jp')} }}
+                                </a>
+                                
+                                </h5>
                                 <!-- <p>{{$post->{'summary_'.Session::get('locale', 'jp')} }}</p> -->
                                 <h6>{{$post->author }}</h6>
                             </div>
