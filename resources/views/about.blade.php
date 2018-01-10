@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="main_features fix roomy-70">
                     <div class="header">
-                        <h3 class="header-title">Company Information</h3>
+                        <h3 class="header-title">@lang('nav.about')</h3>
                         <span class="line"></span>
                     </div>
                     <div class="content">

@@ -6,7 +6,7 @@
     <section id="about" class="about bg-black fix">
         <div class="overlay"></div>
         <!--End off container -->
-        <h3>Services</h3>
+        <h3>@lang('nav.service')</h3>
     </section>
     <!--End off Home Sections-->
     <section id="company-service">
