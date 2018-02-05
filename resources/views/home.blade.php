@@ -173,7 +173,7 @@
                     </div>
 
                     @foreach($posts as $post)
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="test_item fix">
                             <div class="item_img">
                                 <img src="{{$post->img}}" alt=""/>
