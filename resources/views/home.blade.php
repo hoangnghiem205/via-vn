@@ -171,27 +171,70 @@
                         <h3 class="header-title">@lang('home.news')</h3>
                         <span class="line"></span>
                     </div>
-
-                    @foreach($posts as $post)
-                    <div class="col-md-5">
-                        <div class="test_item fix">
-                            <div class="item_img">
-                                <img src="{{$post->img}}" alt=""/>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="test_item fix">
+                                <div class="item_img">
+                                    <img src="{{$posts[0]->img}}" alt=""/>
+                                </div>
+                                <div class="item_text">
+                                    <h5>
+                                        <a href="{{ route('user.news.detail', ['id' => $posts[0]->id]) }}">
+                                            {{$posts[0]->{'title_'.Session::get('locale', 'jp')} }}
+                                        </a>
+                                    </h5>
+                                    <h6>{{$posts[0]->author }}</h6>
+                                </div>
                             </div>
-                            <div class="item_text">
-                                <h5>
-                                <a href="{{ route('user.news.detail', ['id' => $post->id]) }}">
-                                    {{$post->{'title_'.Session::get('locale', 'jp')} }}
-                                </a>
-                                
-                                </h5>
-                                <!-- <p>{{$post->{'summary_'.Session::get('locale', 'jp')} }}</p> -->
-                                <h6>{{$post->author }}</h6>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="test_item fix">
+                                <div class="item_img">
+                                    <img src="{{$posts[1]->img}}" alt=""/>
+                                </div>
+                                <div class="item_text">
+                                    <h5>
+                                        <a href="{{ route('user.news.detail', ['id' => $posts[1]->id]) }}">
+                                            {{$posts[1]->{'title_'.Session::get('locale', 'jp')} }}
+                                        </a>
+                                    </h5>
+                                    <h6>{{$posts[1]->author }}</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="test_item fix">
+                                <div class="item_img">
+                                    <img src="{{$posts[2]->img}}" alt=""/>
+                                </div>
+                                <div class="item_text">
+                                    <h5>
+                                        <a href="{{ route('user.news.detail', ['id' => $posts[2]->id]) }}">
+                                            {{$posts[2]->{'title_'.Session::get('locale', 'jp')} }}
+                                        </a>
+                                    </h5>
+                                    <h6>{{$posts[2]->author }}</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="test_item fix">
+                                <div class="item_img">
+                                    <img src="{{$posts[3]->img}}" alt=""/>
+                                </div>
+                                <div class="item_text">
+                                    <h5>
+                                        <a href="{{ route('user.news.detail', ['id' => $posts[3]->id]) }}">
+                                            {{$posts[3]->{'title_'.Session::get('locale', 'jp')} }}
+                                        </a>
+                                    </h5>
+                                    <h6>{{$posts[3]->author }}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
