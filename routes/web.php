@@ -52,6 +52,7 @@ Route::prefix('admin')->group(function() {
     Route::get('/posts', 'PostsController@index')->name('admin.posts');
     Route::get('/posts/new', 'PostsController@showAddForm')->name('admin.posts.form');
     Route::get('/posts/edit/{id}', 'PostsController@showEditForm')->name('admin.posts.editform');
+    Route::get('/posts/reorder/{src}/{dist}', 'PostsController@reorder')->name('admin.posts.reorder');
     Route::get('/posts/delete/{id}', 'PostsController@delete')->name('admin.posts.delete');
     Route::patch('/posts/udpate/{id}', 'PostsController@update')->name('admin.posts.update');
     Route::post('/posts/new', 'PostsController@add')->name('admin.posts.new');

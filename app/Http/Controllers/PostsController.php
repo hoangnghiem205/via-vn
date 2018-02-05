@@ -27,11 +27,31 @@ class PostsController extends Controller
     public function index()
     {
         // $posts = Post::all();
-        $posts = DB::table('posts')->where('type', '=', 1)
-                                    ->orderByRaw('id DESC')
-                                    ->get();
+        $posts = Post::where('type', 1)->orderBy('sort', 'DESC')->get();
         $page_title = "Posts Manager";
         return view('admin/posts/index',compact('posts', 'page_title'));
+    }
+
+    public function reorder($src, $dist) {
+        $arr = Post::where('type', 1)->orderBy('sort', 'DESC')->get();
+        foreach ($arr as $key => $item) {
+            if ($item->id == $src) {
+                $prevIndex = $key - 1;
+                $nextIndex = $key + 1;
+                $currIndex = $key;
+            }
+        }
+        $src_post = $arr[$currIndex];
+        if ($dist == 1) 
+            $dist_post = $arr[$prevIndex];
+        else 
+            $dist_post = $arr[$nextIndex];
+        $temp = $src_post->sort;
+        $src_post->sort = $dist_post->sort;
+        $dist_post->sort = $temp;
+        $src_post->save();
+        $dist_post->save();
+        return "OK";
     }
 
     public function showAddForm() {
@@ -46,6 +66,7 @@ class PostsController extends Controller
     }
 
     public function update(Request $request, $id) {
+        
         $post = Post::find($id);
         $post->title_en = $request->title_en;
         $post->summary_en = $request->summary_en;
@@ -79,6 +100,9 @@ class PostsController extends Controller
         $post->img = $request->img;
         $post->author = $request->author;
         $post->type = 1;
+        $post->sort = 1;
+        $post->save();
+        $post->sort = $post->id;
         $post->save();
         return redirect()->intended(route('admin.posts'));
     }
